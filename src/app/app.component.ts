@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  dashboard: boolean = true;
+  heroes: boolean;
+ 
   title = 'reviewApp';
+
+  switchDash(){
+    this.dashboard = true
+    this.heroes = false;
+  }
+  switchHero(){
+    this.heroes = true;
+    this.dashboard = false;
+  }
 }
